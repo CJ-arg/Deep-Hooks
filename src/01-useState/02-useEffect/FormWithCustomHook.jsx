@@ -4,7 +4,7 @@ import { useForm } from '../../hooks/useForm';
 
 const FormWithCustomHook = () => {
 
-  const { formState, onInputChange, username, email, password } = useForm({
+  const { formState, onInputChange, username, email, password, onResetForm } = useForm({
     username: '',
     email: '',
     password: ''
@@ -21,7 +21,6 @@ const FormWithCustomHook = () => {
   useEffect(() => {
     // console.log("useEffect called by email");
   }, [email]);
-
 
 
   return (
@@ -50,7 +49,7 @@ const FormWithCustomHook = () => {
         value={password}
         onChange={onInputChange}
       />
-
+      <button onClick={onResetForm} className='btn btn-success mt-2'>Reset</button>
 
     </>
 
