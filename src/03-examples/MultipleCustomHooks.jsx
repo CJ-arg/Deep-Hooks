@@ -1,6 +1,8 @@
 import React from 'react';
 import { useFetch, useCounter } from '../hooks';
-import { Text, LoadingText } from './index';
+import Text from './Text';
+import LoadingText from './LoadingText';
+
 
 
 
