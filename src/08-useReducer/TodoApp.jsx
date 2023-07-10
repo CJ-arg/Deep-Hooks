@@ -8,7 +8,7 @@ const TodoApp = () => {
     todos, todosCount, pendingTodo, handleNewTodo, handleDeleteTodo, handleToggleTodo } = useTodos()
   return (
     <>
-      <h1>TodoApp: {todosCount} --<small> Pendientes: {pendingTodo}</small></h1>
+      <h1>TodoApp: <button className='btn btn-success btn-lg'>{todosCount}</button> --<small> Pendientes: <button className='btn btn-danger btn-lg'>{pendingTodo}</button></small></h1>
       <hr />
       <div className="row">
         <div className="col-7">
