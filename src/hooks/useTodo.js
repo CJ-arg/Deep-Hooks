@@ -6,11 +6,13 @@ const init = () => {
 };
 export const useTodos = () => {
   const [todos, dispatch] = useReducer(todoReducer, [], init);
-
+  let todosCount = 0;
+  let pendingTodo = 0;
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
-
+  todosCount = todos.length;
+  pendingTodo = todos.filter((todo) => !todo.done).length;
   const handleNewTodo = (todo) => {
     const action = {
       type: "[TODO] Add Todo",
@@ -32,6 +34,8 @@ export const useTodos = () => {
   };
   return {
     todos,
+    todosCount,
+    pendingTodo,
     handleNewTodo,
     handleDeleteTodo,
     handleToggleTodo,
