@@ -1,10 +1,7 @@
-
+import React from 'react'
 import TodoAdd from './TodoAdd'
 import TodoList from './TodoList'
 import { useTodos } from '../hooks/useTodo'
-
-
-
 
 const TodoApp = () => {
   const {
