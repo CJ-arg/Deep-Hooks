@@ -7,7 +7,7 @@ const initialState = [{
   done: false,
 },
 {
-  id: new Date().getTime() * 3,
+  id: new Date().getTime() + 11,
   description: "Recolectar la piedra del Alma",
   done: false,
 }
@@ -15,7 +15,7 @@ const initialState = [{
 
 const TodoApp = () => {
   const [state, dispatch] = useReducer(todoReducer, initialState)
-
+  console.log(initialState);
   return (
     <>
       <h1>TodoApp: 10 --<small> Pendientes: 2</small></h1>
@@ -24,11 +24,8 @@ const TodoApp = () => {
         <div className="col-7">
 
           <ul className='list-group'>
-
-
-
-            <li className='list-group-item d-flex justify-content-between'> <span className='align-self-center'> Item 1</span> <button className='btn btn-danger btn-sm'>Borrar</button></li>
-            <li className='list-group-item d-flex justify-content-between'><span className='align-self-center'> Item 2</span> <button className='btn btn-danger btn-sm'>Borrar</button> </li>
+            <li className='list-group-item d-flex justify-content-between'> <span className='align-self-center'> {initialState[0].id}</span> <button className='btn btn-danger btn-sm'>Borrar</button></li>
+            <li className='list-group-item d-flex justify-content-between'><span className='align-self-center'> {initialState[1].id}</span> <button className='btn btn-danger btn-sm'>Borrar</button> </li>
             <li className='list-group-item d-flex justify-content-between'><span className='align-self-center'> Item 3</span><button className='btn btn-danger btn-sm'>Borrar</button> </li>
           </ul>
 
