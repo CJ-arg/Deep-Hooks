@@ -38,12 +38,17 @@ const TodoApp = () => {
       <hr />
       <div className="row">
         <div className="col-7">
-          <TodoList todos={todos} onDeleteTodo={id => handleDeleteTodo(id)} />
+          <TodoList
+            todos={todos}
+            onDeleteTodo={id => handleDeleteTodo(id)}
+          />
         </div>
         <div className="col-5">
           <h4>Agregar TODO</h4>
           <hr />
-          <TodoAdd onNewTodo={handleNewTodo} />
+          <TodoAdd
+            onNewTodo={handleNewTodo}
+          />
         </div>
       </div>
     </>
