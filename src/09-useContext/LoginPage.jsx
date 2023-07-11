@@ -7,7 +7,6 @@ const LoginPage = () => {
   return (
     <>
       <h1>LoginPage </h1>
-
       <hr />
       <pre>
         {JSON.stringify(user, null, 3)}
