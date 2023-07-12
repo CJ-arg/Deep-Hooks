@@ -11,7 +11,7 @@ export const MultipleCustomHooks = () => {
 
   const { counter, increment } = useCounter(1);
   const { data, isLoading, hasError } = useFetch(`https://jsonplaceholder.typicode.com/posts/${counter}`)
-  const { body, title } = !!data && data;
+  const { body, title } = !!data && data[0];
 
   return (
     <>
