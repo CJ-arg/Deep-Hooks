@@ -11,7 +11,7 @@ const HomePage = () => {
       <pre>
         {JSON.stringify(user, null, 3)}
       </pre>
-      <button className='btn btn-primary'
+      <button className='btn btn-info'
         onClick={() => setUser({
           id: 123,
           name: 'carlos Janon',
